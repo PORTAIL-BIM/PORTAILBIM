@@ -1,5 +1,5 @@
 require("dotenv").config();
-const Sequelize  = require('sequelize');
+const Sequelize = require('sequelize');
 const operatorsAliases = {
     $like: Sequelize.Op.like,
 };
@@ -24,5 +24,9 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
+
+db.architecture = require("../models/Architecture")(sequelize, Sequelize);
+db.mep = require("../models/MEP")(sequelize, Sequelize);
+db.structure = require("../models/Structure")(sequelize, Sequelize);
 
 module.exports = db;
