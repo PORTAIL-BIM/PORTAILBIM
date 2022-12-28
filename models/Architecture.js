@@ -7,11 +7,11 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
         },
         image: {
-            type: Sequelize.STRING
+            type: Sequelize.STRING,
         },
-
-
-
+        file: {
+            type: Sequelize.STRING,
+        }
     }
     )
     return Architecture
